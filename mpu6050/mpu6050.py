@@ -9,6 +9,7 @@ https://github.com/m-rtijn/mpu6050
 """
 
 import smbus
+import time
 
 class mpu6050:
 
@@ -164,8 +165,9 @@ class mpu6050:
         elif accel_range == self.ACCEL_RANGE_16G:
             accel_scale_modifier = self.ACCEL_SCALE_MODIFIER_16G
         else:
-            print("Unkown range - accel_scale_modifier set to self.ACCEL_SCALE_MODIFIER_2G")
+            print("MAL RANGO - accel_scale_modifier set to self.ACCEL_SCALE_MODIFIER_2G")
             accel_scale_modifier = self.ACCEL_SCALE_MODIFIER_2G
+            time.sleep(1)
             raise Exception('MAL RANGO')
 
 

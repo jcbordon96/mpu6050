@@ -166,6 +166,8 @@ class mpu6050:
         else:
             print("Unkown range - accel_scale_modifier set to self.ACCEL_SCALE_MODIFIER_2G")
             accel_scale_modifier = self.ACCEL_SCALE_MODIFIER_2G
+            raise Exception('MAL RANGO')
+
 
         x = x / accel_scale_modifier
         y = y / accel_scale_modifier
